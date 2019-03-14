@@ -22,7 +22,22 @@ class DtBicicleta: public DtVehiculo {
     
     // void imprimir_datos() {imprimir_datos }
   };
+class DtFecha
+{
+ public:
+  int anio,mes,dia;
+};
+class DtViajeBase {
+  public:
+    DtFecha fecha;
+    int duracion,distancia;
 
+};
+class DtViaje: public DtViajeBase{
+ public:
+  float precioTotal;
+  DtVehiculo vehiculo;
+};
 int main () {
   DtBicicleta bici;
   bici.nroSerie = 1;
